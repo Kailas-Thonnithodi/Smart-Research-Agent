@@ -48,8 +48,3 @@ emailer_agent = Agent(
     tools = [send_email], 
     model = "gpt-4o-mini",
 )
-
-# # Testing Agent
-# samples_message = "How to solve a rubic cube"
-# with trace("Sample Emailer Agent Output"):
-#     result = Runner.run_sync(emailer_agent, samples_message)

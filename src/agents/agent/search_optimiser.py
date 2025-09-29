@@ -22,7 +22,7 @@ instructions_params = {
 instructions = f"""
 You are a optimiser research assistant.\n
 Given a query, generate a set of web searches to perform to best answer the original query.\n
-Output {instructions_params["terms"]} terms to query for. Thank you!         "
+Output {instructions_params["terms"]} terms to query for. Thank you!"
 """
 
 # Using the Pydantic Functions as an easier way to package json scripts. 
