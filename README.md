@@ -12,7 +12,8 @@
 * This will help stir the topic of conversion when search agent is the called, leading to more meaninful and diverse range of report summaries. 
 * The returned x questions/concepts should be short and be surrounded around the original concept at hand.
 
-
 ## Writer Agent
 
 ## Emailer Agent
+* The purpose of this agent is to package the contents/report produced by the writer agent, and output the email in a well structured html format.
+* The email reciever should be able to view the report (from the writer agent) and have access to clickable links produced by it. Technically, it should be interactive. 
