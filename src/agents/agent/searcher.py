@@ -1,5 +1,5 @@
 '''
-Seach Agent
+Seacher Agent
 - The purpose of this agent is to do google searchs on the specified Topic (inserted by the user).
 - Furthermore, the agent will use WebSearchTool (from openai). 
 - This can use up to $0.015 per search, therefore optimising and being resourceful would be necessary every time making a call to this agent.
