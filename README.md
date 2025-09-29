@@ -1,1 +1,18 @@
 # Smart-Research-Agent
+
+## Searcher Agent
+* The purpose of this agent is to do google searchs on the specified Topic (inserted by the user).
+* Furthermore, the agent will use WebSearchTool (from openai). 
+* This can use up to $0.015 per search, therefore optimising and being resourceful would be necessary every time making a call to this agent.
+* The returned output of the file will be the result of the summary of singular search of topic (based on the webpage it "clicked on").
+
+
+## Search Optimiser Agent
+* The purpose of this agent is to propose x amount of questions/concepts surrounding the topic.
+* This will help stir the topic of conversion when search agent is the called, leading to more meaninful and diverse range of report summaries. 
+* The returned x questions/concepts should be short and be surrounded around the original concept at hand.
+
+
+## Writer Agent
+
+## Emailer Agent
