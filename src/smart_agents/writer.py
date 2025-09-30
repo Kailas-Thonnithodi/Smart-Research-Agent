@@ -5,9 +5,8 @@ Writer Agent
 '''
 
 # Libraries
-from agents import Agent, Runner, trace, function_tool
+from agents import Agent
 from pydantic import BaseModel, Field
-from agents.model_settings import ModelSettings
 from dotenv import load_dotenv
 
 # Loading gpt model

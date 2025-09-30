@@ -1,8 +1,5 @@
 # Libraries
-from agents import Agent, Runner, trace, function_tool
-from pydantic import BaseModel, Field
-from agents.model_settings import ModelSettings
-from dotenv import load_dotenv
+from agents import Runner, trace
 import asyncio
 from src.smart_agents import searcher, search_optimiser, writer, emailer
 

@@ -5,9 +5,8 @@ Emailer Agent
 '''
 
 # Libraries
-from agents import Agent, function_tool, trace, Runner
+from agents import Agent, function_tool
 from dotenv import load_dotenv
-from pydantic import BaseModel, Field
 import sendgrid
 import os
 from sendgrid.helpers.mail import Mail, Email, To, Content
@@ -33,11 +32,12 @@ You should use your tool to send only one email, providing the report converted 
 def send_email(subject: str, html_body: str) -> Dict[str, str]:
     """ Send out an email with the given subject and HTML body """
     sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
-    from_email = Email("kthonnithodi@gmail.com") # Change this to your verified email
-    to_email = To("kthonnithodi@gmail.com") # Change this to your email
+    from_email = Email("kthonnithodi@gmail.com")
+    to_email = To("kthonnithodi@gmail.com")
     content = Content("text/html", html_body)
-    mail = Mail(from_email, to_email, subject, content).get()
-    response = sg.client.mail.send.post(request_body=mail)
+    mail = Mail(from_email, to_email, subject, content)
+    mail_json = mail.get()
+    response = sg.client.mail.send.post(request_body=mail_json)
     return {"status": "success"}
 
 # agent properties

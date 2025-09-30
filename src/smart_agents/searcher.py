@@ -7,7 +7,7 @@ Seacher Agent
 '''
 
 # Libraries
-from agents import Agent, WebSearchTool, Runner, trace
+from agents import Agent, WebSearchTool
 from agents.model_settings import ModelSettings
 from dotenv import load_dotenv
 

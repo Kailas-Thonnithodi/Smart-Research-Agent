@@ -5,7 +5,7 @@ Seach Optimiser Agent
 - The returned x questions/concepts should be short and be surrounded around the original concept at hand.
 '''
 # Libraries
-from agents import Agent, Runner, trace
+from agents import Agent
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 
