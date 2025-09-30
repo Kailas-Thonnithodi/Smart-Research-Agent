@@ -9,7 +9,6 @@ Seacher Agent
 # Libraries
 from agents import Agent, WebSearchTool, Runner, trace
 from agents.model_settings import ModelSettings
-from agent_properties import GPT_MODELS
 from dotenv import load_dotenv
 
 # Loading gpt model
@@ -37,11 +36,6 @@ searcher_agent = Agent(
     name = "Searcher Agent",
     instructions = instructions,
     tools = [WebSearchTool(search_context_size="low")], 
-    model = GPT_MODELS["default"],
+    model = "gpt-4o-mini",
     model_settings = ModelSettings(tool_choice = "required")
 )
-
-# Testing Agent
-samples_message = "Top 5 mobile games 2025"
-with trace("Sample Search Agent Output"):
-    result = Runner.run_sync(searcher_agent, samples_message)

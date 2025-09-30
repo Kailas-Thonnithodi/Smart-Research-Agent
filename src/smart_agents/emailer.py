@@ -5,14 +5,13 @@ Emailer Agent
 '''
 
 # Libraries
-from agents import Agent, function_tool
+from agents import Agent, function_tool, trace, Runner
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import sendgrid
 import os
 from sendgrid.helpers.mail import Mail, Email, To, Content
 from typing import Dict
-from agent_properties import GPT_MODELS
 
 # Loading gpt model
 load_dotenv(override=True)
@@ -32,12 +31,13 @@ You should use your tool to send only one email, providing the report converted 
 # A function which is used for transporting the findings in the form of a report (report being completed by the writer agent).
 @function_tool
 def send_email(subject: str, html_body: str) -> Dict[str, str]:
-    sendg = sendgrid.SendGridAPIClient(api_key=os.environ.get("SENDGRID_API_KEY"))
-    from_email = Email("kthonnithodi@gmail.com")
-    to_email = To("kthonnithodi@gmail.com")
+    """ Send out an email with the given subject and HTML body """
+    sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
+    from_email = Email("kthonnithodi@gmail.com") # Change this to your verified email
+    to_email = To("kthonnithodi@gmail.com") # Change this to your email
     content = Content("text/html", html_body)
-    mail = Mail(from_email, to_email, content)
-    response = sendg.client.mail.send.post(request_body=mail)
+    mail = Mail(from_email, to_email, subject, content).get()
+    response = sg.client.mail.send.post(request_body=mail)
     return {"status": "success"}
 
 # agent properties
@@ -45,5 +45,5 @@ emailer_agent = Agent(
     name = "Emailer Agent",
     instructions = instructions,
     tools = [send_email], 
-    model = GPT_MODELS["default"],
+    model = "gpt-4o-mini"
 )

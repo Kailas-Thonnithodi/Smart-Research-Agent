@@ -8,7 +8,6 @@ Seach Optimiser Agent
 from agents import Agent, Runner, trace
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
-from agent_properties import GPT_MODELS
 
 # Loading gpt model
 load_dotenv(override=True)
@@ -41,11 +40,6 @@ class WebSearchPlan(BaseModel):
 search_optimiser_agent = Agent(
     name = "Search Optimiser Agent",
     instructions = instructions,
-    model = GPT_MODELS["default"],
+    model = "gpt-4o-mini",
     output_type = WebSearchPlan
 )
-
-# Testing Agent
-samples_message = "Top 5 mobile games 2025"
-with trace("Sample Search Optimiser Agent Output"):
-    result = Runner.run_sync(search_optimiser_agent, samples_message)
