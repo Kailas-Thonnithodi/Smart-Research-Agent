@@ -1,9 +1,7 @@
 '''
-Seacher Agent
-- The purpose of this agent is to do google searchs on the specified Topic (inserted by the user).
-- Furthermore, the agent will use WebSearchTool (from openai). 
-- This can use up to $0.015 per search, therefore optimising and being resourceful would be necessary every time making a call to this agent.
-- The returned output of the file will be the result of the summary of singular search of topic (based on the webpage it "clicked on").
+Writer Agent
+- The writer agent will be responsible for creating a report (predefined word and page limits), based on the findings/summaries completed by the searcher agent.
+- Since the searcher agent will be completing the searches (baesed on results proposed by the search optimiser agent), the writer agent is based on the findings conducted by the data reseached by it's children agents. 
 '''
 
 # Libraries
