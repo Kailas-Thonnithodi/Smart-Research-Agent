@@ -1,6 +1,7 @@
 # All files which could be generated on the macbook environment, should be ignored. 
 __pycache__/
 .python-version
+__pycache__
 __init__.py
 uv.lock
 .env
@@ -8,3 +9,4 @@ uv.lock
 .DS_Store
 agents.egg-info/
 SmartResearchAgent.egg-info/
+README.md
