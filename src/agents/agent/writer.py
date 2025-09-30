@@ -11,6 +11,7 @@ from agents import Agent, Runner, trace, function_tool
 from pydantic import BaseModel, Field
 from agents.model_settings import ModelSettings
 from dotenv import load_dotenv
+from agent_properties import GPT_MODELS
 
 # Loading gpt model
 load_dotenv(override=True)
@@ -43,6 +44,6 @@ class ReportData(BaseModel):
 writer_agent = Agent(
     name = "Writer Agent",
     instructions = instructions,
-    model = "gpt-4o-mini",
+    model = GPT_MODELS["default"],
     output_type = ReportData
 )

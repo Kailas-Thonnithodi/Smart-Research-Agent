@@ -75,11 +75,4 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# Ruff stuff:
-.ruff_cache/
-
-# PyPI configuration file
-.pypirc
-
 .DS_Store

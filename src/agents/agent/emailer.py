@@ -12,6 +12,7 @@ import sendgrid
 import os
 from sendgrid.helpers.mail import Mail, Email, To, Content
 from typing import Dict
+from agent_properties import GPT_MODELS
 
 # Loading gpt model
 load_dotenv(override=True)
@@ -44,5 +45,5 @@ emailer_agent = Agent(
     name = "Emailer Agent",
     instructions = instructions,
     tools = [send_email], 
-    model = "gpt-4o-mini",
+    model = GPT_MODELS["default"],
 )
