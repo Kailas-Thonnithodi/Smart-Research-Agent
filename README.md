@@ -8,6 +8,7 @@ sdk_version: 5.47.2
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Gradio](https://img.shields.io/badge/Gradio-5.47.2-orange)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Model-Hugging%20Face-yellow)](https://huggingface.co/spaces/GoldenMeta/Smart-Research-Agent)
 ![Status](https://img.shields.io/badge/status-active-success)
 
 The **Smart Research Agent** automates the process of information discovery and reporting. Given a query, it performs deep research, generates a structured report, and emails it directly to a specified recipient using the **SendGrid API**.
@@ -24,6 +25,9 @@ The Smart Research Agent streamlines research into four steps:
 4. Deliver the report via email in an interactive HTML format.  
 
 This pipeline ensures research is **thorough, well-structured, and instantly delivered**.
+
+### 🌐 Live Demo
+Try it out on [Hugging Face 🤗](https://huggingface.co/your-username/your-model). If you are interested in local development of the agents, you can follow the instructions folder. 
 
 ---
 
