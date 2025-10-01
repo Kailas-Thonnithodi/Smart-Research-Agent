@@ -9,11 +9,21 @@ sdk_version: 5.47.2
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Gradio](https://img.shields.io/badge/Gradio-5.47.2-orange)
 ![Status](https://img.shields.io/badge/status-active-success)
-![License](https://img.shields.io/badge/license-MIT-yellow)
 
-The **Smart Research Agent** is an intelligent system that takes any user query, applies advanced research methods, and generates a structured report. The report is then emailed to a specified recipient in a polished HTML format.
+The **Smart Research Agent** automates the process of information discovery and reporting. Given a query, it performs deep research, generates a structured report, and emails it directly to a specified recipient using the **SendGrid API**.
 
-This project can be highly useful in scenarios where quick, thorough, and well-presented research is needed.
+---
+
+## 📖 About
+
+The Smart Research Agent streamlines research into four steps:
+
+1. Accept a research query or question.  
+2. Conduct in-depth searches and gather relevant insights.  
+3. Generate a comprehensive research report.  
+4. Deliver the report via email in an interactive HTML format.  
+
+This pipeline ensures research is **thorough, well-structured, and instantly delivered**.
 
 ---
 
