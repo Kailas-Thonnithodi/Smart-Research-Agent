@@ -1,5 +1,5 @@
 from agents import Runner, trace, gen_trace_id
-from src.smart_agents.searcher import search_agent
+from src.smart_agents.searcher import searcher_agent
 from src.smart_agents.search_optimiser import search_optimiser_agent, WebSearchTerm, WebSearchPlan
 from src.smart_agents.writer import writer_agent, ReportData
 from src.smart_agents.emailer import emailer_agent
@@ -41,7 +41,7 @@ class ResearchManager:
         '''Perform a search (based on websearchterms from plan_searches) for the inputted query. This will be executed x amount of times on perform_searches function.'''
         search_term = f"Search Term: {item.query}.\n Reason for using Search Term: {item.reason}"
         try:
-            result = await Runner.run(search_agent, search_term)
+            result = await Runner.run(searcher_agent, search_term)
             return str(result.final_output)
         except Exception:
             return None
