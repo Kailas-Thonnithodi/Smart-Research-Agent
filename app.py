@@ -16,9 +16,17 @@ with gr.Blocks(theme=gr.themes.Default(primary_hue="sky")) as ui:
        2. If the user typed a query, they can press the run button. 
        3. If the run button is clicked, execute the run function.'''
     gr.Markdown("# Smart Research Agent")
-    query_textbox = gr.Textbox(label="What topic would you like to research today?")
-    run_button = gr.Button("Run", variant="primary")
+    
+    with gr.Row():
+        query_textbox = gr.Textbox(label="What topic would you like to research today?")
+    
+    with gr.Row():
+        with gr.Column(scale=1):
+            run_button = gr.Button("Run", variant="primary")
+    
     report = gr.Markdown(label="Report")
+
+    # Button functionality
     run_button.click(fn=run, inputs=query_textbox, outputs=report)
     query_textbox.submit(fn=run, inputs=query_textbox, outputs=report)
 

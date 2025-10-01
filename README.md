@@ -1,3 +1,9 @@
+---
+title: Smart-Research-Agent
+app_file: app.py
+sdk: gradio
+sdk_version: 5.47.2
+---
 # Smart-Research-Agent
 
 ## Searcher Agent

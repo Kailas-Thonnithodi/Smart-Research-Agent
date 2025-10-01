@@ -21,6 +21,7 @@ uv pip install -e .
 
 # After loading everything, execute the async_functions file
 uv run src/functions/async_functions.py
+uv run src/master_agent.py
 
 # Before Running
 # chmod +x run.sh
