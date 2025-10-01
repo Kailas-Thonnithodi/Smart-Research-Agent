@@ -4,23 +4,46 @@ app_file: app.py
 sdk: gradio
 sdk_version: 5.47.2
 ---
-# Smart-Research-Agent
+# 🔬 Smart-Research-Agent
 
-## Searcher Agent
-* The purpose of this agent is to do google searchs on the specified Topic (inserted by the user).
-* Furthermore, the agent will use WebSearchTool (from openai). 
-* This can use up to $0.015 per search, therefore optimising and being resourceful would be necessary every time making a call to this agent.
-* The returned output of the file will be the result of the summary of singular search of topic (based on the webpage it "clicked on").
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Gradio](https://img.shields.io/badge/Gradio-5.47.2-orange)
+![Status](https://img.shields.io/badge/status-active-success)
+![License](https://img.shields.io/badge/license-MIT-yellow)
 
-## Search Optimiser Agent
-* The purpose of this agent is to propose x amount of questions/concepts surrounding the topic.
-* This will help stir the topic of conversion when search agent is the called, leading to more meaninful and diverse range of report summaries. 
-* The returned x questions/concepts should be short and be surrounded around the original concept at hand.
+The **Smart Research Agent** is an intelligent system that takes any user query, applies advanced research methods, and generates a structured report. The report is then emailed to a specified recipient in a polished HTML format.
 
-## Writer Agent
-* The writer agent will be responsible for creating a report (predefined word and page limits), based on the findings/summaries completed by the searcher agent.
-* Since the searcher agent will be completing the searches (baesed on results proposed by the search optimiser agent), the writer agent is based on the findings conducted by the data reseached by it's children agents. 
+This project can be highly useful in scenarios where quick, thorough, and well-presented research is needed.
 
-## Emailer Agent
-* The purpose of this agent is to package the contents/report produced by the writer agent, and output the email in a well structured html format.
-* The email reciever should be able to view the report (from the writer agent) and have access to clickable links produced by it. Technically, it should be interactive. 
+---
+
+## 🧩 Components
+
+### 🔎 Searcher Agent
+- Performs **Google searches** on the specified topic.
+- Uses the **WebSearchTool (OpenAI)** for queries.  
+- **Cost note**: Each search may use up to **$0.015** → optimisation and resourcefulness are key.  
+- Returns a concise **summary of a single page result** based on the search click-through.
+
+---
+
+### 🎯 Search Optimiser Agent
+- Proposes **related questions/concepts** surrounding the topic.  
+- Helps guide the Searcher Agent to build **diverse, meaningful insights**.  
+- Returns a list of short, focused questions rooted in the original concept.
+
+---
+
+### ✍️ Writer Agent
+- Compiles the findings from the Searcher Agent into a **formal research report**.  
+- Supports predefined **word/page limits** for flexibility.  
+- Builds reports entirely from the **data collected by child agents**.
+
+---
+
+### 📧 Emailer Agent
+- Packages the Writer Agent’s report into a **structured HTML email**.  
+- Ensures the recipient receives an **interactive email** with clickable links.  
+- Aims for a professional and reader-friendly presentation.
+
+---
