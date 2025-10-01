@@ -14,8 +14,8 @@ load_dotenv(override=True)
 
 # agent instruction's parameters
 instructions_params = {
-    "page_range": [5, 10],
-    "words": 2000,
+    "page_range": [6, 8],
+    "words": 1000,
     "tone": "cohesive"
 } 
 

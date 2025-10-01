@@ -17,7 +17,7 @@ load_dotenv(override=True)
 # agent instruction's parameters
 instructions_params = {
     "paragraphs": 3,
-    "words": 500,
+    "words": 300,
     "tone": "efficient"
 } 
 
