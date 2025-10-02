@@ -31,14 +31,17 @@ Steps:
 
 Requirements:  
 - Length: {instructions_params["page_range"][0]}–{instructions_params["page_range"][1]} pages (~{instructions_params["words"]} words).  
-- Style: Detailed, thorough, and structured.  
+- Style: Detailed, thorough, and structured.
 - Output only the outline and the final markdown report (no extra commentary).  
 """
 
 # Will generate a json based strucutre based on the generate report
 # This will be very helpful for the emailer agent. 
 class ReportData(BaseModel):
-    markdown_report: str = Field(description="The Final Report.")
+    short_summary: str = Field(description=
+                               "A short 2-3 sentence summary of the findings.")
+    markdown_report: str = Field(description="The markdown final report.")
+    follow_up_questions: str = Field(description="Suggested topics to research further.")
 
 # agent properties
 writer_agent = Agent(
@@ -47,3 +50,4 @@ writer_agent = Agent(
     model = "gpt-4o-mini",
     output_type = ReportData
 )
+
