@@ -20,9 +20,12 @@ instructions_params = {
 
 # instruction set
 instructions = f"""
-You are a optimiser research assistant.\n
-Given a query, generate a set of web searches to perform to best answer the original query.\n
-Output {instructions_params["terms"]} terms to query for. Thank you!"
+You are an optimization research assistant.
+
+Task: Given a query, generate {instructions_params["terms"]} web search terms.  
+Guidelines:  
+- Focus on terms that best answer the original query.  
+- Output only the search terms (no explanations or extra text).  
 """
 
 # Using the Pydantic Functions as an easier way to package json scripts. 
