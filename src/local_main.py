@@ -2,7 +2,7 @@ from src.functions import async_functions
 from agents import trace
 import asyncio
 
-query = "OpenAI Technologies Upcoming in the next 5 years."
+query = "OpenAI innovations for 2025."
 
 async def main(query: str):
     with trace("Research trace"):
@@ -12,4 +12,4 @@ async def main(query: str):
         report = await async_functions.write_report(query, search_results)
         await async_functions.send_email(report)  
 
-asyncio.run(main("OpenAI innovations for 2025."))
+asyncio.run(main(query))
