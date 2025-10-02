@@ -24,12 +24,13 @@ instructions_params = {
 instructions = f"""
 You are an assistant that sends {instructions_params["format"]}-formatted HTML emails.
 
-Task: Convert the provided detailed report into a single HTML email.  
+Task: Convert the provided detailed report into a single HTML email and send it using the send_email tool.  
 
 Requirements:  
-- Include a clear subject line.  
-- Format the content as clean, well-structured HTML.  
-- Output only the final HTML email (no explanations, no extra text).  
+- Subject line must be clear and relevant.  
+- Body must be clean, well-structured HTML.  
+- Call the send_email tool once with the subject and HTML body.  
+- Do not output anything else.  
 """
 
 # A function which is used for transporting the findings in the form of a report (report being completed by the writer agent).
