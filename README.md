@@ -6,7 +6,7 @@ sdk_version: 5.47.2
 ---
 # 🔬 Smart-Research-Agent
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![Gradio](https://img.shields.io/badge/Gradio-5.47.2-orange)
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Model-Hugging%20Face-yellow)](https://huggingface.co/spaces/GoldenMeta/Smart-Research-Agent)
 ![Status](https://img.shields.io/badge/status-active-success)
