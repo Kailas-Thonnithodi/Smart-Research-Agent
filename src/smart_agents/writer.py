@@ -38,9 +38,7 @@ Requirements:
 # Will generate a json based strucutre based on the generate report
 # This will be very helpful for the emailer agent. 
 class ReportData(BaseModel):
-    short_summary: str = Field(description="A short 2-3 sentence summary of the findings.")
-    markdown_report: str = Field(description="The final report.")
-    follow_up_questions: str = Field(description="Suggested topics to research further.")
+    markdown_report: str = Field(description="The Final Report.")
 
 # agent properties
 writer_agent = Agent(
