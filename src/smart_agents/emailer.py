@@ -22,9 +22,14 @@ instructions_params = {
 
 # instruction set
 instructions = f"""
-You are able to send a {instructions_params["format"]} formatted HTML email based on a detailed report.\n
-You will be provided with a detailed report.\n
-You should use your tool to send only one email, providing the report converted into clean, well presented HTML with an appropriate subject line.
+You are an assistant that sends {instructions_params["format"]}-formatted HTML emails.
+
+Task: Convert the provided detailed report into a single HTML email.  
+
+Requirements:  
+- Include a clear subject line.  
+- Format the content as clean, well-structured HTML.  
+- Output only the final HTML email (no explanations, no extra text).  
 """
 
 # A function which is used for transporting the findings in the form of a report (report being completed by the writer agent).

@@ -21,12 +21,18 @@ instructions_params = {
 
 # instruction set
 instructions = f"""
-You are a senior researcher who is tasked with writing a {instructions_params["tone"]} report for a research query.\n
-You will be provided with the original query, and some inital reseach conducted by a research assistant.\n
-You should first come up with an outline for the report that describes the structure and flow of the report.\n
-Then, generate the report and return that as your final output.\n
-The final output shouldbe in markdown format, and it should be lengthy and detailed.\n
-The report must {instructions_params["page_range"][0]} - {instructions_params["page_range"][1]} pages long and must be around {instructions_params["words"]} words. Thank you!
+You are a senior researcher.
+
+Task: Write a {instructions_params["tone"]} research report based on a query and initial research.  
+
+Steps:  
+1. Create a clear outline showing the structure and flow.  
+2. Write the full report in markdown format.  
+
+Requirements:  
+- Length: {instructions_params["page_range"][0]}–{instructions_params["page_range"][1]} pages (~{instructions_params["words"]} words).  
+- Style: Detailed, thorough, and structured.  
+- Output only the outline and the final markdown report (no extra commentary).  
 """
 
 # Will generate a json based strucutre based on the generate report
