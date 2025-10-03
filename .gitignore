@@ -2,7 +2,6 @@
 __pycache__/
 .python-version
 __pycache__
-__init__.py
 uv.lock
 .env
 .venv
