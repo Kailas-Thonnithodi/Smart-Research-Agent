@@ -27,7 +27,7 @@ The Smart Research Agent streamlines research into four steps:
 This pipeline ensures research is **thorough, well-structured, and instantly delivered**.
 
 ### 🌐 Live Demo
-Try it out on [Hugging Face 🤗]([[https://huggingface.co/your-username/your-model](https://huggingface.co/spaces/GoldenMeta/Smart-Research-Agent?logs=container](https://img.shields.io/badge/%F0%9F%A4%97%20Model-Hugging%20Face-yellow)](https://huggingface.co/spaces/GoldenMeta/Smart-Research-Agent))). If you are interested in local development of the agents, you can follow the instructions folder. 
+Try it out on [Hugging Face 🤗](https://img.shields.io/badge/%F0%9F%A4%97%20Model-Hugging%20Face-yellow)](https://huggingface.co/spaces/GoldenMeta/Smart-Research-Agent). If you are interested in local development of the agents, you can follow the instructions folder. 
 
 ---
 
