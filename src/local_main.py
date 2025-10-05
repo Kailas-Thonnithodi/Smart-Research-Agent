@@ -2,7 +2,7 @@ from src.functions import async_functions
 from agents import trace
 import asyncio
 
-query = "OpenAI Technologies Upcoming in the next 5 years."
+query = "NVDA Earnings, Income statements, balance sheets from start of 2025 to end of 2025."
 
 async def main(query: str):
     with trace("Research trace"):
